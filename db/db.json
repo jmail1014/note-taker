@@ -2,8 +2,11 @@
   "notes": [
     {
       "title": "groceries",
-      "text": "apples",
-      "id": "0"
+      "text": "apples"
+    },
+    {
+      "title": "pet store",
+      "text": "cat food"
     }
   ]
 }
