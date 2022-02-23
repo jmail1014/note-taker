@@ -4,7 +4,7 @@
 This application allows the user the capibility to write and save notes. It utilizes an API to handle get, post and delete requests so that the user can see all of the notes, create new notes and delete old notes. 
 
 ## Technologies used:
-Express.js, for serving static html files
+Express.js, for serving static html files &
 Heroku, for deploying and view deployed application
 
 ## Screenshot
