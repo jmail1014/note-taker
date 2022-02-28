@@ -1,12 +1,11 @@
 {
   "notes": [
     {
-      "title": "groceries",
-      "text": "apples"
-    },
-    {
       "title": "pet store",
-      "text": "cat food"
+      "text": "cat food",
+      "id": {
+        "NIL": "00000000-0000-0000-0000-000000000000"
+      }
     }
   ]
 }

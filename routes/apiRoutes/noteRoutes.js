@@ -1,5 +1,6 @@
 const { route } = require("express/lib/application");
 const req = require("express/lib/request");
+const uuid = require("uuid");
 const notes = require("../../db/db.json");
 
 const router = require("express").Router();
@@ -24,14 +25,10 @@ router.get("/notes/:id", (req, res) => {
 
 // Create new note
 router.post("/notes", (req, res) => {
-  req.body.id = notes.length.toString();
+  req.body.id = uuid;
+  createNewNote(req.body, notes);
 
-  if (!req.body) {
-    res.status(400).send("The note is not properly formatted.");
-  } else {
-    const note = createNewNote(req.body, notes);
-    res.json(note);
-  }
+  res.json(req.body);
 });
 
 // Delete note
