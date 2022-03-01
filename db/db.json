@@ -1,11 +1,7 @@
-{
-  "notes": [
-    {
-      "title": "pet store",
-      "text": "cat food",
-      "id": {
-        "NIL": "00000000-0000-0000-0000-000000000000"
-      }
-    }
-  ]
-}
+[
+  {
+    "title": "groceries",
+    "text": "food",
+    "id": "5f943380-98ea-11ec-b483-3d391d120a3f"
+  }
+]

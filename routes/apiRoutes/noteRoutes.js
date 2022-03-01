@@ -1,6 +1,6 @@
 const { route } = require("express/lib/application");
 const req = require("express/lib/request");
-const uuid = require("uuid");
+const { v1: uuidv1 } = require("uuid");
 const notes = require("../../db/db.json");
 
 const router = require("express").Router();
@@ -25,7 +25,10 @@ router.get("/notes/:id", (req, res) => {
 
 // Create new note
 router.post("/notes", (req, res) => {
-  req.body.id = uuid;
+  req.body.id = uuidv1();
+  console.log(req.body.id);
+  console.log(req.body);
+  console.log(notes);
   createNewNote(req.body, notes);
 
   res.json(req.body);
@@ -33,7 +36,14 @@ router.post("/notes", (req, res) => {
 
 // Delete note
 router.delete("/notes/:id", (req, res) => {
-  deleteNote(req.params.id, notes);
+    let deletedNoteId;
+    for (let i = 0; i < notes.length; i++) {
+        if (notes[i].id == req.params.id) {
+            console.log('hi')
+            deletedNoteId = i;
+        }
+    } 
+  deleteNote(deletedNoteId, notes);
   res.json(notes);
 });
 
