@@ -39,7 +39,6 @@ router.delete("/notes/:id", (req, res) => {
     let deletedNoteId;
     for (let i = 0; i < notes.length; i++) {
         if (notes[i].id == req.params.id) {
-            console.log('hi')
             deletedNoteId = i;
         }
     } 
